@@ -562,73 +562,10 @@ background:#1fb85b;
 }
 
 /*==================================
-      COUNTDOWN
-==================================*/
-
-.countdown{
-
-    display:grid;
-
-    grid-template-columns:repeat(4,1fr);
-
-    gap:12px;
-
-    margin:28px 0;
-
-}
-
-.countdown div{
-
-    background:rgba(255,255,255,.45);
-
-    border:1px solid rgba(255,255,255,.35);
-
-    backdrop-filter:blur(18px);
-
-    border-radius:18px;
-
-    padding:16px 10px;
-
-    text-align:center;
-
-}
-
-.countdown span{
-
-    display:block;
-
-    font-size:26px;
-
-    font-weight:700;
-
-    color:#222;
-
-}
-
-.countdown small{
-
-    display:block;
-
-    margin-top:6px;
-
-    font-size:12px;
-
-    color:#777;
-
-}
-
-/*==================================
       MOBILE
 ==================================*/
 
 @media(max-width:768px){
-
-    .countdown{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
     .infoRow{
 
         padding:15px;
@@ -1038,4 +975,27 @@ html{
 
 .slide.active{
     overscroll-behavior:contain;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+#slider {
+    min-height: 100vh;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    #slider {
+        min-height: 100vh;
+        height: auto;
+    }
+}
+
+html, body {
+    overflow-x: hidden;
+    overflow-y: auto;
 }
