@@ -998,4 +998,29 @@ body {
 html, body {
     overflow-x: hidden;
     overflow-y: auto;
+}.twoColumn{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+}
+
+.infoCol{
+    flex:1;
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.infoCol i{
+    width:22px;
+    height:22px;
+    color:#FFD54A;
+    flex-shrink:0;
+}
+
+@media(max-width:768px){
+    .twoColumn{
+        flex-direction:column;
+        gap:16px;
+    }
 }
