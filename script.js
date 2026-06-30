@@ -217,7 +217,8 @@ const wishList = document.getElementById("wishList");
 chatRef.on("child_added", (snapshot) => {
 
     const wish = snapshot.val();
-
+    
+    if (!wish || !wish.message) return;
     const div = document.createElement("div");
 
     div.className = "wishItem";
@@ -233,10 +234,12 @@ chatRef.on("child_added", (snapshot) => {
 "#E91E63"
 ];
 
-const avatar = wish.name.charAt(0).toUpperCase();
+const userName = wish.name || "Guest";
+
+const avatar = userName.charAt(0).toUpperCase();
 
 const color = colors[
-    wish.name.charCodeAt(0) % colors.length
+    userName.charCodeAt(0) % colors.length
 ];
 
 div.innerHTML = `
@@ -252,7 +255,7 @@ div.innerHTML = `
 
         <div class="chatName">
 
-            ${wish.name}
+            ${userName}
 
         </div>
 
@@ -323,3 +326,4 @@ sendWish.addEventListener("click",()=>{
 
 });
     
+
