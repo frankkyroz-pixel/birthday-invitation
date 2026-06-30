@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Iz Birthday Invitation</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ========================= -->
+<!-- Background -->
+<!-- ========================= -->
+
+<div class="background">
+    <div class="gradient one"></div>
+    <div class="gradient two"></div>
+</div>
+
+<audio id="bgMusic" loop>
+    <source src="assets/music.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn">
+    🔇
+</button>
+
+<!-- ========================= -->
+<!-- Slide Container -->
+<!-- ========================= -->
+
+<main id="slider">
+
+    <!-- ========== Slide 1 ========== -->
+
+    <section class="slide active" id="slide1">
+
+        <div class="card">
+
+            <img
+                src="assets/nailong.png"
+                class="nailong"
+                alt="Nailong">
+
+            <span class="miniTitle">
+
+                YOU'RE INVITED
+
+            </span>
+
+            <h1>
+
+                faiz's Birthday
+
+            </h1>
+
+            <p>
+
+                07 July 2026
+
+            </p>
+
+            <button id="openBtn">
+
+                Open Invitation
+
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ========== Slide 2 ========== -->
+
+    <section class="slide" id="slide2">
+
+        <div class="card">
+
+            <h2>
+
+                Hi 👋
+
+            </h2>
+
+            <p>
+
+                Thank you for opening this invitation.
+
+            </p>
+
+            <p>
+
+                I would love to celebrate my special day with you.
+
+            </p>
+
+            <div class="navigation">
+
+                <button class="next">
+
+                    Next →
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+  <!-- ========== Slide 3 ========== -->
+
+<section class="slide" id="slide3">
+
+    <div class="card">
+
+        <h2>Event Information</h2>
+
+        <div class="eventInfo">
+
+            <div class="infoRow">
+
+                <i data-lucide="calendar-days"></i>
+
+                <div>
+
+                    <h4>Date</h4>
+
+                    <p>Tuesday, 07 July 2026</p>
+
+                </div>
+
+            </div>
+
+            <div class="infoRow">
+
+                <i data-lucide="clock-3"></i>
+
+                <div>
+
+                    <h4>Time</h4>
+
+                    <p>18.30 WIB</p>
+
+                </div>
+
+            </div>
+
+            <div class="infoRow">
+
+                <i data-lucide="map-pinned"></i>
+
+                <div>
+
+                    <h4>Location</h4>
+
+                    <p>Perum Tanjakan indah No.H1/16, Tanjakan, Kec. Rajeg, Kabupaten Tangerang, Banten 15540</p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <button id="mapsBtn" class="mapsBtn">
+
+            Open Google Maps
+
+        </button>
+
+        <div class="countdown">
+
+            <div>
+
+                <span id="days">00</span>
+
+                <small>Days</small>
+
+            </div>
+
+            <div>
+
+                <span id="hours">00</span>
+
+                <small>Hours</small>
+
+            </div>
+
+            <div>
+
+                <span id="minutes">00</span>
+
+                <small>Minutes</small>
+
+            </div>
+
+            <div>
+
+                <span id="seconds">00</span>
+
+                <small>Seconds</small>
+
+            </div>
+
+        </div>
+
+        <button id="waBtn">
+
+            Confirm Attendance
+
+        </button>
+
+        <div class="navigation">
+
+            <button class="back">
+
+                ← Back
+
+            </button>
+
+            <button class="next">
+
+                Next →
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+   
+    <!-- ========== Slide 9 ========== -->
+
+    <section class="slide" id="slide4">
+
+        <div class="card">
+
+            <h2>💬 Birthday Wall</h2>
+
+<div class="chatTop">
+
+    <div class="groupAvatar">
+
+        🎂
+
+    </div>
+
+    <div>
+
+        <h3>Birthday Wall</h3>
+
+        <small id="wishCount">0 Wishes</small>
+
+    </div>
+
+</div>
+
+<div class="chatContainer">
+
+    <div id="wishList"></div>
+
+</div>
+
+<div class="chatInput">
+
+    <textarea
+        id="guestMessage"
+        placeholder="Type a birthday wish..."></textarea>
+
+    <button id="sendWish">
+
+        <i data-lucide="send"></i>
+
+    </button>
+
+</div>
+
+<div class="navigation">
+
+    <button class="back">
+
+        ← Back
+
+    </button>
+
+</div>
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>
+
+        Made with ❤️ by Aripinn
+
+    </p>
+
+</footer>
+
+<!-- ========================= -->
+<!-- NAME POPUP -->
+<!-- ========================= -->
+
+<div id="namePopup" class="popupOverlay">
+
+    <div class="popupBox">
+
+        <div class="popupIcon">
+
+            👋
+
+        </div>
+
+        <h2>
+
+            Welcome
+
+        </h2>
+
+        <p>
+
+            Before sending a birthday wish,<br>
+            tell me your name.
+
+        </p>
+
+        <input
+            type="text"
+            id="popupName"
+            placeholder="Your name">
+
+        <button type="button" id="saveName">
+
+            Continue →
+
+        </button>
+
+    </div>
+
+</div>
+
+<script src="https://unpkg.com/lucide@latest"></script>
+
+<script>
+    lucide.createIcons();
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.13.2/firebase-database-compat.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+<script src="script.js"></script>
+
+</body>
+</html>
